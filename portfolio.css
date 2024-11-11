@@ -1,0 +1,376 @@
+html {
+    scroll-padding-top: 100px; 
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
+    padding: 14px 16px;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 5rem;
+}
+header li a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+}
+header li a:hover {
+    background-color: black;
+    padding: 14px 24px;
+}
+.a {
+   display: flex;
+   text-align: center;
+   list-style-type: none;
+   justify-content: center;
+}
+
+body {
+    background-color: black;
+}
+#introduction {
+    font-size: 3rem;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+}
+.Home {
+    margin-top: 100px;
+    justify-content: center;
+    display: flex;
+    gap: 5%;
+}
+
+.Home h1{
+    color: white;
+    opacity: 0;
+    position: relative;
+    top: 4rem;
+    animation: mymove 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes mymove {
+    from {
+        top: 100px;
+    }
+    to {
+        bottom: 50px;
+        opacity: 1;
+    }
+    
+}  
+.Home img {
+    background-image: url(https://github.com/EJTerania/Images-portfolio/blob/main/splash-311140_1280.png?raw=true);
+    background-size: 100%;
+    background-repeat: no-repeat;
+ 
+    position: relative;
+    height: 30rem;
+    width: auto;
+    opacity: 0;
+    top: 50px;
+    animation: imageMove 1s forwards 1s;
+    transition: transform 0.3s ease; 
+}
+
+.Home img:hover {
+    transform: scale(1.1); 
+}
+
+@keyframes imageMove {
+    from {
+        opacity: 0;
+        top: 50px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.About h2{
+    margin-bottom: 5%;
+    color: white;
+    font-size: 3rem;
+    margin-top: 10rem;
+    text-align: center;
+}
+.AboutContent {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.About p {
+    color: white;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.AboutContent p, .AboutContent img {
+    opacity: 0; 
+    transform: translateY(30px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+.AboutContent img {
+    background-image: url(https://github.com/EJTerania/Images-portfolio/blob/main/splash-311140_1280.png?raw=true);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30rem;
+    width: auto;
+    position: relative;
+    animation: imgMove 1s forwards 1s;
+    transition: transform 0.3s ease; 
+    animation-delay: 0.5s; 
+}
+
+
+.AboutContent img:hover {
+    transform: scale(1.1); 
+}
+
+@keyframes imgMove {
+    from {
+        opacity: 0;
+        top: 50px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+.AboutContent p {
+    animation-delay: 1s; 
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+.skills-list { 
+    padding: 5%;
+    background-color: #333; 
+    margin-top: 5%;     
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+.Skills h2{
+    font-size: 3rem;
+    color: white;
+    margin-top: 10rem;
+    text-align: center;
+}
+.Skills p {
+    color: white;
+}
+.skills-list img {
+    width: 80px;
+    height: 80px;
+}
+.skills-list div {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+}
+
+.skills-list div:hover {
+    transform: scale(1.1); 
+}
+
+.skills-list div img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.skills-list div:hover img {
+    transform: scale(1.2); 
+}
+
+.skills-list div p {
+    margin-top: 10px;
+    color: #fff;
+}
+.resume {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+}
+
+.resume a {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.resume a:hover {
+    transform: scale(1.1); 
+    background-color: #555; 
+}
+
+.resume a:active {
+    transform: scale(1); 
+}
+.Contact {
+    margin-top: 10%;
+    
+}
+.Contact h2{
+    font-size: 3rem;
+    margin-top: 10%;
+    color: white;
+    text-align: center;
+    margin-bottom: 2.5%;
+}
+.Contact ul {
+    background-color: #333;
+    list-style: none;
+    text-align: center;
+    gap: 5rem;
+    display: grid;
+    grid-auto-rows: auto;
+    padding: 5%;
+}
+
+.Contact a {
+    position: relative;
+    color: black;
+    text-decoration: none;    
+}
+.Contact img {
+    transition: transform 0.3s ease;
+}
+.Contact a:hover img{
+    transform: scale(1.2); 
+
+}
+.Contact img {
+    width: 2rem; 
+    height: 2rem; 
+    margin-right: 8px;
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .Home, .AboutContent {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Home {
+        gap: 5rem;
+    }
+    .AboutContent img {
+        height: 20rem;
+        width: 20rem;
+    }
+    .Home img{
+        height: 20rem;
+        width: 17rem;
+    }
+}
+@media (min-width: 540px) and (max-width: 560px) {
+    .Home, .AboutContent {
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+    .skills-list {
+        grid-template-columns: 1fr 1fr; 
+    }
+    .AboutContent img, .Home img {
+        height: 15rem;
+    }
+    .AboutContent p, .skills-list div p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    #introduction {
+        font-size: 3rem;
+    }
+    .AboutContent {
+        flex-direction: column;  
+    }
+    .AboutContent img {
+        height: 500px;
+        width: 500px;
+    }
+    .skills-list {
+        grid-template-columns: 1fr 1fr);
+    }
+    .Home img {
+        height: 15rem;
+    }
+    header {
+        padding: 2rem;
+    }
+    header li a {
+        text-decoration: none;
+        color: white;
+        padding: none;
+    }
+    header li a:hover {
+        background-color: black;
+        padding: 14px 24px;
+    }
+    .Home {
+        display: grid;
+        gap: none;
+    }
+    .Home h1{
+        z-index: 1;
+        opacity: 0;
+        position: relative;
+        top: 4rem;
+        animation: mymove 1s;
+        animation-fill-mode: forwards;
+    }
+    .Home img {
+        z-index: 0;
+    }
+
+    .About p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .AboutContent img {
+        height: 300px;
+        width: 300px;
+    }
+    .a {
+        display: flex;
+        text-align: center;
+        list-style-type: none;
+        justify-content: center;
+        }
+        .skills-list img {
+            width: 60px;
+            height: 60px;
+        }
+        .resume a {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+    }
